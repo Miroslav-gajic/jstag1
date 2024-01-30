@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fruchtListe"></div>
+
+    <script>
+        var fruchtString = "Mango/Kirschen/Kiwi/Trauben/Birne/Pfirsich/Orange/Zitrone";
+    
+        var fruechteArray = fruchtString.split("/");
+    
+        fruechteArray.forEach(function(frucht) {
+            var fruchtElement = document.createElement("p");
+            fruchtElement.textContent = frucht.charAt(0).toUpperCase() + frucht.slice(1).toLowerCase();
+            document.getElementById("fruchtListe").appendChild(fruchtElement);
+        });
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+</html>
